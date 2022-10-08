@@ -21,7 +21,7 @@ user_actions:
     button: true
   confirm_model:
     title: "Confirm your model"
-    description: "Please double-check that your device is a XFone Pro."
+    description: "Please double-check that your device is a SageTea Edge Pro."
   unlock:
     title: "OEM unlock"
     description: "If you haven't done so already, make sure to OEM unlock your device first."
@@ -94,15 +94,15 @@ operating_systems:
           - core:download:
               group: "Ubuntu Touch"
               files:
-                - url: "https://github.com/rubencarneiro/begonia/releases/download/OTA-20.2/system.zip"
+                - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/system.zip"
                   name: "system.zip"
                   checksum:
-                    sum: "fdaf3dc3e283c1c358cde2f360d19c7eacb17dbf36fadb72df308770b1e42bc3"
+                    sum: "223d62504abaf7202216f95e6765887cfec32e09198878455a75152c4d7e6b93"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/begonia/releases/download/OTA-20.2/boot.img"
+                - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/boot.img"
                   name: "boot.img"
                   checksum:
-                    sum: "91cfa615513677cec5e81b8c63fc7fc01b495b43352c30be0dd6622b4a5f8986"
+                    sum: "f46c036d8d5576e08eccff990320166064c583785abd2cc67976538974554ecf"
                     algorithm: "sha256"
       - actions:
           - core:unpack:
