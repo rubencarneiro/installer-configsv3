@@ -8,7 +8,7 @@
     "checkdownloads": "./v3/checkDownloads.js",
     "buildconfigs": "./v3/buildConfigs.js",
     "buildschema": "./v3/buildSchema.js",
-    "docs": "npm run buildschema && npx @adobe/jsonschema2md -d public/v2/ -o public/v2/docs -x -"
+    "docs": "npm run buildschema && npx @adobe/jsonschema2md -d public/v3/ -o public/v3/docs -x -"
   },
   "repository": {
     "type": "git",
