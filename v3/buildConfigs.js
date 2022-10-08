@@ -14,7 +14,7 @@ fs.mkdir(path.join("public", "v3", "devices"), { recursive: true })
     Promise.all(
       files.map(f =>
         fs
-          .readFile(path.join("v2", "devices", f))
+          .readFile(path.join("v3", "devices", f))
           .then(cfg => YAML.parse(cfg.toString()))
           .then(cfg =>
             writeJSON(
