@@ -97,7 +97,7 @@ operating_systems:
                 - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/system.zip"
                   name: "system.zip"
                   checksum:
-                    sum: "a17cbaee76fb1d9812a90cf602947a94cce462e90481e3746aafd896c83045b9"
+                    sum: "9607c8af27d9d344b1ba12e471bf0b91e2cc746554ef202b2b5d0b387306c9c0"
                     algorithm: "sha256"
                 - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/boot.img"
                   name: "boot.img"
