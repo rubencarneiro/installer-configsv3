@@ -4,15 +4,28 @@ formfactor: "phone"
 aliases: []
 doppelgangers: []
 user_actions:
+  confirm_model:
+    title: "Confirm your model"
+    description: "Please check that your device is a OnePlus Nord N10 5G (billie)."
   bootloader:
     title: "Reboot to Bootloader"
     description: "With the device powered off, press and hold the volume down and power buttons until the screen turns on. It should say 'Fastboot Mode' underneath the warning sign."
+    image: "phone_power_down"
+    button: true
+  bootloader_from_fastbootd:
+    title: "Reboot to Bootloader"
+    description: 'With the device still at the fastbootd screen, use the volume buttons to select "Reboot to bootloader".'
     image: "phone_power_down"
     button: true
   recovery:
     title: "Reboot to Recovery"
     description: "With the device still at the 'Fastboot Mode' screen (if not, power off the device and press and hold volume down and power buttons until the screen turns on), select the 'Recovery Mode' option by using the volume buttons and press the power button to enter."
     image: "phone_power_down"
+    button: true
+  fastbootd:
+    title: "Reboot to fastbootd mode"
+    description: 'With the device still at the "FastBoot Mode", use the Volume buttons to switch to "Recovery Mode" and push the power button to confirm your selection. Then select "Fastboot mode" from the list.'
+    image: "phone_power_up"
     button: true
   downgrade_android:
     title: "Downgrade Android"
@@ -23,6 +36,7 @@ user_actions:
     description: "For details about Sagetea Software support for the XFone, please head over to the Sagetea Support here."
     link: "https://xfonemobile.com/contact-modern/"
 unlock:
+  - "confirm_model"
   - "downgrade_android"
   - "support"
 handlers:
@@ -41,8 +55,13 @@ operating_systems:
           systemimage:channels:
       - var: "wipe"
         name: "Wipe Userdata"
-        tooltip: "Wipe personal data"
+        tooltip: "Wipe personal data. This is necessary for first time installations."
         type: "checkbox"
+      - var: "partition"
+        name: "Partitioning"
+        tooltip: "Changes partition sizes as required. Only necessary for first time installations."
+        type: "checkbox"
+        value: true
       - var: "bootstrap"
         name: "Bootstrap"
         tooltip: "Flash system partitions using fastboot"
@@ -50,6 +69,28 @@ operating_systems:
         value: true
     prerequisites: []
     steps:
+    ### Ensure we always start in bootloader mode
+      - actions:
+          - adb:reboot:
+              to_state: "bootloader"
+        fallback:
+          - core:user_action:
+              action: "bootloader"
+      ### Ensure the bootloader has been unlocked already
+      - actions:
+          - fastboot:wait:
+      - actions:
+          - fastboot:assert_var:
+              variable: "unlocked"
+              value: "yes"
+        fallback:
+          - core:user_action:
+              action: "unlock_phone"
+      ### As this is an A/B device, force all future operations in "a" slot.
+      - actions:
+          - fastboot:set_active:
+              slot: "a"
+      ### Flash important partitions (if requested)
       - actions:
           - core:download:
               group: "firmware"
@@ -70,15 +111,6 @@ operating_systems:
                   checksum:
                     sum: "4f1b180cc3a485c4eb2d996010ef5a2bc307bba0178bfa5411c6fa7220819d83"
                     algorithm: "sha256"
-        condition:
-          var: "bootstrap"
-          value: true
-      - actions:
-          - adb:reboot:
-              to_state: "bootloader"
-        fallback:
-          - core:user_action:
-              action: "bootloader"
         condition:
           var: "bootstrap"
           value: true
@@ -104,29 +136,64 @@ operating_systems:
           var: "bootstrap"
           value: true
       - actions:
+          - fastboot:reboot_fastboot:
+        fallback:
+          - core:user_action:
+              action: "fastbootd"
+        condition:
+          var: "partition"
+          value: true
+      - actions:
+          # Remove all unused logical partitions
+          - fastboot:delete_logical_partition:
+              partition: "system_ext_a"
+          - fastboot:delete_logical_partition:
+              partition: "system_ext_b"
+          - fastboot:delete_logical_partition:
+              partition: "product_a"
+          - fastboot:delete_logical_partition:
+              partition: "product_b"
+          # Remove _b variants of used partitions
+          - fastboot:delete_logical_partition:
+              partition: "system_b"
+          - fastboot:delete_logical_partition:
+              partition: "vendor_b"
+          - fastboot:delete_logical_partition:
+              partition: "odm_b"
+        condition:
+          var: "partition"
+          value: true
+      - actions:
+          - fastboot:reboot_bootloader:
+        fallback:
+          - core:user_action:
+              action: "bootloader_from_fastbootd"
+        condition:
+          var: "partition"
+          value: true
+      ### Wipe userdata (if requested)
+      - actions:
+          - fastboot:erase:
+              partition: "userdata"
+        condition:
+          var: "wipe"
+          value: true
+      - actions:
           - fastboot:format:
               partition: "userdata"
               type: "ext4"
         condition:
           var: "wipe"
           value: true
+      ### Systemimage installation steps
       - actions:
-          - core:user_action:
-              action: "recovery"
-        condition:
-          var: "bootstrap"
-          value: true
-      - actions:
-          - adb:reboot:
-              to_state: "recovery"
+          - fastboot:reboot_recovery:
         fallback:
           - core:user_action:
               action: "recovery"
-        condition:
-          var: "bootstrap"
-          value: false
       - actions:
           - systemimage:install:
+              verify_recovery: true
       - actions:
           - adb:reboot:
               to_state: "recovery"
