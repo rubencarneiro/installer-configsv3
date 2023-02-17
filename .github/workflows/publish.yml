@@ -1,4 +1,4 @@
-name: Publish build
+name: Publish
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 14
+      - name: Use Node.js 18
         uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: "18"
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -28,15 +28,13 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
       - name: npm install
         run: npm install
-      - name: npm run buildconfigs
-        run: npm run buildconfigs
-      - name: npm run buildschema
-        run: npm run buildschema
-      - name: npm run docs
-        run: npm run docs
+      - name: npm run build
+        run: npm run build
+
+      - name: copy artifacts
+        run: cp -r build public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
