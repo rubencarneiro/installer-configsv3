@@ -76,16 +76,6 @@ operating_systems:
         fallback:
           - core:user_action:
               action: "bootloader"
-      ### Ensure the bootloader has been unlocked already
-      - actions:
-          - fastboot:wait:
-      - actions:
-          - fastboot:assert_var:
-              variable: "unlocked"
-              value: "yes"
-        fallback:
-          - core:user_action:
-              action: "unlock_phone"
       ### As this is an A/B device, force all future operations in "a" slot.
       - actions:
           - fastboot:set_active:
