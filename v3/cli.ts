@@ -77,7 +77,7 @@ program
   .command("validate", { isDefault: true })
   .summary("validate a file")
   .description("Validate a UBports Installer config YAML file.")
-  .argument("[glob...]", "file(s) to validate", ["v2/devices/"])
+  .argument("[glob...]", "file(s) to validate", ["v3/devices/"])
   .action(async glob => {
     if (
       (
@@ -101,7 +101,7 @@ program
   .description(
     "Test UBports Installer config Schema against YAML files. Files may specify 'expectedErrors' on the top level."
   )
-  .argument("[glob...]", "file(s) to test", ["v2/test/**/*"])
+  .argument("[glob...]", "file(s) to test", ["v3/test/**/*"])
   .action(async glob => {
     if (
       (
@@ -142,7 +142,7 @@ program
   .command("checkdownload", { hidden: true })
   .summary("check file downloads")
   .description("ensure all files mentioned in a config can be download")
-  .argument("[glob...]", "file(s) to check", ["./v2/devices"]);
+  .argument("[glob...]", "file(s) to check", ["./v3/devices"]);
 
 // TODO
 program
@@ -151,7 +151,7 @@ program
   .description(
     "Ensure all files work with a specified version of the UBports Installer. If no version is specified, the latest version is determined."
   )
-  .argument("[glob...]", "file(s) to check", ["./v2/devices"])
+  .argument("[glob...]", "file(s) to check", ["./v3/devices"])
   .option(
     "-v, --ubports-installer-version <version>",
     "version to check, defaults to latest version"

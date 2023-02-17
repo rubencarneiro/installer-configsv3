@@ -27,16 +27,16 @@ import { schemas } from "./schemas.js";
 /** resolves build base dir if it exists */
 const buildDir = Promise.all([
   fs
-    .mkdir("build/v2/devices", { recursive: true })
-    .then(() => fs.mkdir("build/v2/schema", { recursive: true })),
+    .mkdir("build/v3/devices", { recursive: true })
+    .then(() => fs.mkdir("build/v3/schema", { recursive: true })),
   fs
     .mkdir("lib/schema", { recursive: true })
-    .then(() => fs.cp("v2/schema", "lib/schema", { recursive: true }))
-]).then(() => "build/v2");
+    .then(() => fs.cp("v3/schema", "lib/schema", { recursive: true }))
+]).then(() => "build/v3");
 
 const buildTypes = async () => {
   const types = compile(schemas[0], "UBportsInstallerConfig", {
-    cwd: "v2/schema"
+    cwd: "v3/schema"
   });
   await buildDir;
   await fs.writeFile(path.join("lib/schema.d.ts"), await types);
@@ -95,7 +95,7 @@ const buildIndex = async configs => {
 
   return Promise.all([
     fs.writeFile(
-      path.join("build", "v2", "index.json"),
+      path.join("build", "v3", "index.json"),
       JSON.stringify(
         index.sort((a, b) =>
           a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
@@ -103,18 +103,18 @@ const buildIndex = async configs => {
       )
     ),
     fs.writeFile(
-      path.join("build", "v2", "aliases.json"),
+      path.join("build", "v3", "aliases.json"),
       JSON.stringify(aliases)
     )
   ]);
 };
 
 const buildData = async () => {
-  const files = await fs.readdir("v2/devices");
+  const files = await fs.readdir("v3/devices");
   await Promise.all(
     files.map(f =>
       fs
-        .readFile(path.join("v2", "devices", f), "utf-8")
+        .readFile(path.join("v3", "devices", f), "utf-8")
         .then(cfg => YAML.parse(cfg))
         .then(cfg => buildConfigs(cfg))
     )

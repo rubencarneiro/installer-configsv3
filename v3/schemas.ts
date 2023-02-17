@@ -23,6 +23,6 @@ import path from "path";
 import YAML from "yaml";
 
 /** array of schemas */
-export const schemas = readdirSync("v2/schema")
-  .map(file => readFileSync(path.join("v2/schema/", file), "utf-8"))
+export const schemas = readdirSync("v3/schema")
+  .map(file => readFileSync(path.join("v3/schema/", file), "utf-8"))
   .map(schema => YAML.parse(schema));
