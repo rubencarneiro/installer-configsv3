@@ -27,12 +27,12 @@ import { schemas } from "./schemas.js";
 /** resolves build base dir if it exists */
 const buildDir = Promise.all([
   fs
-    .mkdir("build/v2/devices", { recursive: true })
+    .mkdir("build/v3/devices", { recursive: true })
     .then(() => fs.mkdir("build/v3/schema", { recursive: true })),
   fs
     .mkdir("lib/schema", { recursive: true })
     .then(() => fs.cp("v3/schema", "lib/schema", { recursive: true }))
-]).then(() => "build/v2");
+]).then(() => "build/v3");
 
 const buildTypes = async () => {
   const types = compile(schemas[0], "UBportsInstallerConfig", {
@@ -95,7 +95,7 @@ const buildIndex = async configs => {
 
   return Promise.all([
     fs.writeFile(
-      path.join("build", "v2", "index.json"),
+      path.join("build", "v3", "index.json"),
       JSON.stringify(
         index.sort((a, b) =>
           a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
