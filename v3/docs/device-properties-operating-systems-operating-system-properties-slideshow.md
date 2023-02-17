@@ -1,7 +1,7 @@
 # Slideshow Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow
+operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow
 ```
 
 An array of slides presenting the operating system's most compelling features.

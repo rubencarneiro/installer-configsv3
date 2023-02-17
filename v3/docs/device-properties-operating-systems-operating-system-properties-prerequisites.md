@@ -1,7 +1,7 @@
 # Prerequisites Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites
+operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites
 ```
 
 An array of strings referring to user_actions defined above that are needed before the installation. This should not include the steps from the generic unlock block, but actions specific to the installation of this operating system.

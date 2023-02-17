@@ -1,7 +1,7 @@
 # Untitled undefined type in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value
 ```
 
 Default value of the option

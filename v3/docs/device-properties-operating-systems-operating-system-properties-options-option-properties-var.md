@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var
 ```
 
 Variable the setting will be stored in.

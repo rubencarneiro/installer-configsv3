@@ -1,7 +1,7 @@
 # Slide title Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title
+operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title
 ```
 
 Title of the slide

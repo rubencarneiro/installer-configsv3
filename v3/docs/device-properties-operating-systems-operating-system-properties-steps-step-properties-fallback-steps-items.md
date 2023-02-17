@@ -1,7 +1,7 @@
 # Untitled undefined type in Device Schema
 
 ```txt
-v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback/items
+step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback/items
 ```
 
 

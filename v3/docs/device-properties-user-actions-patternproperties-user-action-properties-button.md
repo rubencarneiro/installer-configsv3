@@ -1,7 +1,7 @@
 # Button Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button
 ```
 
 Specify whether there should be a done-button displayed.

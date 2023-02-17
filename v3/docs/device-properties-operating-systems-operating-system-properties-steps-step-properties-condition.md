@@ -1,7 +1,7 @@
 # Condition Schema
 
 ```txt
-v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition
+step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition
 ```
 
 Query an installation option to determine if the step should be run

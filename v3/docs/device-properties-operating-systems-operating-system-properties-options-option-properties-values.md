@@ -1,7 +1,7 @@
 # Values Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values
 ```
 
 List of values for the select.

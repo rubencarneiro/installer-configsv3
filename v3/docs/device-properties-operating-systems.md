@@ -1,7 +1,7 @@
 # Operating systems Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems
+operating_systems.schema.yml#/properties/operating_systems
 ```
 
 An array of objects describing operating systems available for installation.

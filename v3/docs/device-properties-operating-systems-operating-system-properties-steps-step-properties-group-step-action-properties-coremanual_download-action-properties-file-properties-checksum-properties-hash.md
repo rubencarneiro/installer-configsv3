@@ -1,0 +1,15 @@
+# Hash Schema
+
+```txt
+checksum.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:manual_download/properties/file/properties/checksum/properties/sum
+```
+
+Checksum of the file to download
+
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                          |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [device.schema.json*](../device.schema.json "open original schema") |
+
+## sum Type
+
+`string` ([Hash](device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coremanual_download-action-properties-file-properties-checksum-properties-hash.md))

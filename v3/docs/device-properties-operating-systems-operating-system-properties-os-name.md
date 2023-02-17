@@ -1,7 +1,7 @@
 # OS name Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/name
+operating_systems.schema.yml#/properties/operating_systems/items/properties/name
 ```
 
 Human-readable name of the operating system.

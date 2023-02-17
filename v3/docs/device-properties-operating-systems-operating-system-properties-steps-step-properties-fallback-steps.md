@@ -1,7 +1,7 @@
 # Fallback steps Schema
 
 ```txt
-v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback
+step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback
 ```
 
 

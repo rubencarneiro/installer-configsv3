@@ -1,7 +1,7 @@
 # Remote values Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values
 ```
 
 If the values can be generated from a remote source like the systemimage api, this provides the required information for that.
@@ -20,10 +20,13 @@ If the values can be generated from a remote source like the systemimage api, th
 
 # remote_values Properties
 
-| Property                                     | Type          | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                               |
-| :------------------------------------------- | :------------ | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [systemimage:channels](#systemimagechannels) | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-systemimagechannels.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/systemimage:channels") |
-| [asteroid_os:channels](#asteroid_oschannels) | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-asteroid_oschannels.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels") |
+| Property                                           | Type          | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                           |
+| :------------------------------------------------- | :------------ | :------- | :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [systemimage:channels](#systemimagechannels)       | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-systemimagechannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/systemimage:channels")       |
+| [asteroid_os:channels](#asteroid_oschannels)       | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-asteroid_oschannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels")       |
+| [lineage_os:channels](#lineage_oschannels)         | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-lineage_oschannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/lineage_os:channels")         |
+| [postmarketos:releases](#postmarketosreleases)     | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-postmarketosreleases.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/postmarketos:releases")     |
+| [postmarketos:interfaces](#postmarketosinterfaces) | Not specified | Optional | can be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-postmarketosinterfaces.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/postmarketos:interfaces") |
 
 ## systemimage:channels
 
@@ -37,7 +40,7 @@ If the values can be generated from a remote source like the systemimage api, th
 
 *   can be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-systemimagechannels.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/systemimage:channels")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-systemimagechannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/systemimage:channels")
 
 ### systemimage:channels Type
 
@@ -55,8 +58,62 @@ If the values can be generated from a remote source like the systemimage api, th
 
 *   can be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-asteroid_oschannels.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-asteroid_oschannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels")
 
 ### asteroid_os:channels Type
+
+`null`, the value must be null
+
+## lineage_os:channels
+
+
+
+`lineage_os:channels`
+
+*   is optional
+
+*   Type: `null`, the value must be null
+
+*   can be null
+
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-lineage_oschannels.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/lineage_os:channels")
+
+### lineage_os:channels Type
+
+`null`, the value must be null
+
+## postmarketos:releases
+
+
+
+`postmarketos:releases`
+
+*   is optional
+
+*   Type: `null`, the value must be null
+
+*   can be null
+
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-postmarketosreleases.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/postmarketos:releases")
+
+### postmarketos:releases Type
+
+`null`, the value must be null
+
+## postmarketos:interfaces
+
+
+
+`postmarketos:interfaces`
+
+*   is optional
+
+*   Type: `null`, the value must be null
+
+*   can be null
+
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values-properties-postmarketosinterfaces.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/postmarketos:interfaces")
+
+### postmarketos:interfaces Type
 
 `null`, the value must be null

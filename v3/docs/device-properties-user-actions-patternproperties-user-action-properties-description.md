@@ -1,7 +1,7 @@
 # Description Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description
 ```
 
 Short description of the step. For simple tasks, the full instructions can be put here.

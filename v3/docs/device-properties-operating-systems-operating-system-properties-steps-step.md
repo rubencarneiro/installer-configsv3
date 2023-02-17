@@ -1,7 +1,7 @@
 # Step Schema
 
 ```txt
-v3/schema/step.schema.yml#/properties/handlers/properties/bootloader_locked
+step.schema.yml#/properties/handlers/properties/bootloader_locked
 ```
 
 Installation step.
@@ -16,12 +16,12 @@ Installation step.
 
 # bootloader_locked Properties
 
-| Property                | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                   |
-| :---------------------- | :------------ | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [actions](#actions)     | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions")      |
-| [fallback](#fallback)   | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback") |
-| [optional](#optional)   | `boolean`     | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-optional.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/optional")       |
-| [condition](#condition) | Not specified | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-condition.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition")     |
+| Property                | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                         |
+| :---------------------- | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [actions](#actions)     | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions")      |
+| [fallback](#fallback)   | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback") |
+| [optional](#optional)   | `boolean`     | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-optional.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/optional")       |
+| [condition](#condition) | Not specified | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-condition.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition")     |
 
 ## actions
 
@@ -35,7 +35,7 @@ Installation step.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions")
 
 ### actions Type
 
@@ -53,7 +53,7 @@ Installation step.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback")
 
 ### fallback Type
 
@@ -71,7 +71,7 @@ If true, errors in this step will be ignored
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-optional.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/optional")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-optional.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/optional")
 
 ### optional Type
 
@@ -89,7 +89,7 @@ Query an installation option to determine if the step should be run
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-condition.md "v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step-properties-condition.md "step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/condition")
 
 ### condition Type
 

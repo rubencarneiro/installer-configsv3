@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/video
+operating_systems.schema.yml#/properties/operating_systems/items/properties/video
 ```
 
 A video introducing the user to the operating system they just installed.

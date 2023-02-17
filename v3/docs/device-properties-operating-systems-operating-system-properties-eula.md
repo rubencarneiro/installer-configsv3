@@ -1,7 +1,7 @@
 # EULA Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/eula
+operating_systems.schema.yml#/properties/operating_systems/items/properties/eula
 ```
 
 An end-user license agreement

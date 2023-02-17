@@ -1,7 +1,7 @@
 # Option Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items
+options.schema.yml#/properties/operating_systems/items/properties/options/items
 ```
 
 Option for the installation.
@@ -16,16 +16,16 @@ Option for the installation.
 
 # items Properties
 
-| Property                        | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                                |
-| :------------------------------ | :------------ | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [var](#var)                     | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-var.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var")                     |
-| [name](#name)                   | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-name.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/name")                   |
-| [tooltip](#tooltip)             | `string`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-tooltip.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip")             |
-| [link](#link)                   | `string`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-link.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link")                   |
-| [type](#type)                   | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-type.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type")                   |
-| [remote_values](#remote_values) | `object`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values") |
-| [value](#value)                 | Not specified | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-value.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value")                 |
-| [values](#values)               | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values")               |
+| Property                        | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                      |
+| :------------------------------ | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [var](#var)                     | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-var.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var")                     |
+| [name](#name)                   | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-name.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/name")                   |
+| [tooltip](#tooltip)             | `string`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-tooltip.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip")             |
+| [link](#link)                   | `string`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-link.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link")                   |
+| [type](#type)                   | `string`      | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-type.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type")                   |
+| [remote_values](#remote_values) | `object`      | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values") |
+| [value](#value)                 | Not specified | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-value.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value")                 |
+| [values](#values)               | `array`       | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values")               |
 
 ## var
 
@@ -39,7 +39,7 @@ Variable the setting will be stored in.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-var.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-var.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/var")
 
 ### var Type
 
@@ -57,7 +57,7 @@ Human-readable identifier of the setting.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-name.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/name")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-name.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/name")
 
 ### name Type
 
@@ -75,7 +75,7 @@ A very short help text describing the setting.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-tooltip.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-tooltip.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip")
 
 ### tooltip Type
 
@@ -93,7 +93,7 @@ A link to the docs describing the setting.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-link.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-link.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link")
 
 ### link Type
 
@@ -111,7 +111,7 @@ Describes what values are accepted by the setting and how they are provided.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-type.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-type.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type")
 
 ### type Type
 
@@ -139,7 +139,7 @@ If the values can be generated from a remote source like the systemimage api, th
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values")
 
 ### remote_values Type
 
@@ -161,7 +161,7 @@ Default value of the option
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-value.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-value.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/value")
 
 ### value Type
 
@@ -179,7 +179,7 @@ List of values for the select.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values")
 
 ### values Type
 

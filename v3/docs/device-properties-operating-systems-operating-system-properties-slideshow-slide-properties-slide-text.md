@@ -1,7 +1,7 @@
 # Slide text Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text
+operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text
 ```
 
 Text body of the slide, Markdown supported here.

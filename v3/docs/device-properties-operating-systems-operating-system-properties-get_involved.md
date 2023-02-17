@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved
+operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved
 ```
 
 A link to the OSs get involved page.

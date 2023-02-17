@@ -1,7 +1,7 @@
 # group step Schema
 
 ```txt
-v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions
+step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions
 ```
 
 

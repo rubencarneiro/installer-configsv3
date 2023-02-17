@@ -1,7 +1,7 @@
 # Operating system Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items
+operating_systems.schema.yml#/properties/operating_systems/items
 ```
 
 An operating system available for installation
@@ -16,17 +16,19 @@ An operating system available for installation
 
 # items Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                       |
-| :------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)                   | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-os-name.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/name")                |
-| [options](#options)             | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options")                       |
-| [prerequisites](#prerequisites) | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-prerequisites.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites") |
-| [steps](#steps)                 | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/steps")                 |
-| [eula](#eula)                   | `object` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-eula.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/eula")                   |
-| [slideshow](#slideshow)         | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow")         |
-| [video](#video)                 | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-video.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/video")                 |
-| [donate](#donate)               | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-donate.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/donate")               |
-| [get_involved](#get_involved)   | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-get_involved.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved")   |
+| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                           |
+| :-------------------------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [name](#name)                                 | `string` | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-os-name.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/name")                              |
+| [codename](#codename)                         | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-codename-of-the-device.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/codename")           |
+| [compatible_installer](#compatible_installer) | `string` | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-compatible-installer.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/compatible_installer") |
+| [options](#options)                           | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-options.md "options.schema.yml#/properties/operating_systems/items/properties/options")                                     |
+| [prerequisites](#prerequisites)               | `array`  | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-prerequisites.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites")               |
+| [steps](#steps)                               | `array`  | Required | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/steps")                               |
+| [eula](#eula)                                 | `object` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-eula.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/eula")                                 |
+| [slideshow](#slideshow)                       | `array`  | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow")                       |
+| [video](#video)                               | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-video.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/video")                               |
+| [donate](#donate)                             | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-donate.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/donate")                             |
+| [get_involved](#get_involved)                 | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-get_involved.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved")                 |
 
 ## name
 
@@ -34,17 +36,53 @@ Human-readable name of the operating system.
 
 `name`
 
-*   is optional
+*   is required
 
 *   Type: `string` ([OS name](device-properties-operating-systems-operating-system-properties-os-name.md))
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-os-name.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/name")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-os-name.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/name")
 
 ### name Type
 
 `string` ([OS name](device-properties-operating-systems-operating-system-properties-os-name.md))
+
+## codename
+
+Codename of the device as used by the operating system.
+
+`codename`
+
+*   is optional
+
+*   Type: `string` ([Codename of the device](device-properties-operating-systems-operating-system-properties-codename-of-the-device.md))
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-codename-of-the-device.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/codename")
+
+### codename Type
+
+`string` ([Codename of the device](device-properties-operating-systems-operating-system-properties-codename-of-the-device.md))
+
+## compatible_installer
+
+
+
+`compatible_installer`
+
+*   is required
+
+*   Type: `string` ([Compatible Installer](device-properties-operating-systems-operating-system-properties-compatible-installer.md))
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-compatible-installer.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/compatible_installer")
+
+### compatible_installer Type
+
+`string` ([Compatible Installer](device-properties-operating-systems-operating-system-properties-compatible-installer.md))
 
 ## options
 
@@ -58,7 +96,7 @@ Options for the installation.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options.md "v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-options.md "options.schema.yml#/properties/operating_systems/items/properties/options")
 
 ### options Type
 
@@ -70,13 +108,13 @@ An array of strings referring to user_actions defined above that are needed befo
 
 `prerequisites`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-prerequisites.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-prerequisites.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites")
 
 ### prerequisites Type
 
@@ -88,13 +126,13 @@ An ordered array of objects describing steps required to install the operating s
 
 `steps`
 
-*   is optional
+*   is required
 
 *   Type: `object[]` ([Step](device-properties-operating-systems-operating-system-properties-steps-step.md))
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/steps")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/steps")
 
 ### steps Type
 
@@ -112,7 +150,7 @@ An end-user license agreement
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-eula.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/eula")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-eula.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/eula")
 
 ### eula Type
 
@@ -130,7 +168,7 @@ An array of slides presenting the operating system's most compelling features.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow")
 
 ### slideshow Type
 
@@ -148,7 +186,7 @@ A video introducing the user to the operating system they just installed.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-video.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/video")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-video.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/video")
 
 ### video Type
 
@@ -166,7 +204,7 @@ A link to donate to the developer of the operating system.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-donate.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/donate")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-donate.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/donate")
 
 ### donate Type
 
@@ -184,7 +222,7 @@ A link to the OSs get involved page.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-get_involved.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-get_involved.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/get_involved")
 
 ### get_involved Type
 

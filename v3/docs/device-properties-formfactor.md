@@ -1,7 +1,7 @@
 # Formfactor Schema
 
 ```txt
-v3/schema/formfactor.schema.yml#/properties/formfactor
+formfactor.schema.yml#/properties/formfactor
 ```
 
 What kind of device is it?

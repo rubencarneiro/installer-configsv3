@@ -1,7 +1,7 @@
 # Steps Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/steps
+operating_systems.schema.yml#/properties/operating_systems/items/properties/steps
 ```
 
 An ordered array of objects describing steps required to install the operating system.

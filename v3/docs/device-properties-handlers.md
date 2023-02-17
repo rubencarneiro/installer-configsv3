@@ -16,9 +16,9 @@ Steps to run to handle specific known errors
 
 # handlers Properties
 
-| Property                                | Type     | Required | Nullable       | Defined by                                                                                                                                                            |
-| :-------------------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [bootloader_locked](#bootloader_locked) | `object` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step.md "v3/schema/step.schema.yml#/properties/handlers/properties/bootloader_locked") |
+| Property                                | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
+| :-------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [bootloader_locked](#bootloader_locked) | `object` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-steps-step.md "step.schema.yml#/properties/handlers/properties/bootloader_locked") |
 
 ## bootloader_locked
 
@@ -32,7 +32,7 @@ Installation step.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step.md "v3/schema/step.schema.yml#/properties/handlers/properties/bootloader_locked")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-steps-step.md "step.schema.yml#/properties/handlers/properties/bootloader_locked")
 
 ### bootloader_locked Type
 

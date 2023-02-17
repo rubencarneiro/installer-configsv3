@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/donate
+operating_systems.schema.yml#/properties/operating_systems/items/properties/donate
 ```
 
 A link to donate to the developer of the operating system.

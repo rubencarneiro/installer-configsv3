@@ -1,7 +1,7 @@
 # Options Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options
+options.schema.yml#/properties/operating_systems/items/properties/options
 ```
 
 Options for the installation.

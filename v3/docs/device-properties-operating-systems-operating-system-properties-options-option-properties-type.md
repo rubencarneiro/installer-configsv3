@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/type
 ```
 
 Describes what values are accepted by the setting and how they are provided.

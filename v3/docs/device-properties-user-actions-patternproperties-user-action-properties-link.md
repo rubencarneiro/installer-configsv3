@@ -1,7 +1,7 @@
 # Link Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link
 ```
 
 A link to a more extensive tutorial.

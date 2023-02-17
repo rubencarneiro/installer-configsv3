@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/link
 ```
 
 A link to the docs describing the setting.

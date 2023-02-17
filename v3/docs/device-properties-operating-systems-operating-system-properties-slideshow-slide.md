@@ -1,7 +1,7 @@
 # Slide Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items
+operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items
 ```
 
 Slide about the operating system
@@ -16,11 +16,11 @@ Slide about the operating system
 
 # items Properties
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                   |
-| :-------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [title](#title) | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-title.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title") |
-| [text](#text)   | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-text.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text")   |
-| [image](#image) | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-image.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image") |
+| Property        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                         |
+| :-------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [title](#title) | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-title.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title") |
+| [text](#text)   | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-text.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text")   |
+| [image](#image) | `string` | Optional | cannot be null | [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-image.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image") |
 
 ## title
 
@@ -34,7 +34,7 @@ Title of the slide
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-title.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-title.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/title")
 
 ### title Type
 
@@ -52,7 +52,7 @@ Text body of the slide, Markdown supported here.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-text.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-text.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/text")
 
 ### text Type
 
@@ -70,7 +70,7 @@ Image displayed on the slide.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-image.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image")
+*   defined in: [Device](device-properties-operating-systems-operating-system-properties-slideshow-slide-properties-slide-image.md "operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image")
 
 ### image Type
 

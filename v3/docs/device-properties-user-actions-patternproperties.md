@@ -1,7 +1,7 @@
 # Untitled undefined type in Device Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties
+user_actions.schema.yml#/properties/user_actions/patternProperties
 ```
 
 

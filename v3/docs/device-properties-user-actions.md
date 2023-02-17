@@ -1,7 +1,7 @@
 # User actions Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions
+user_actions.schema.yml#/properties/user_actions
 ```
 
 Object that contains instructions for the user for later reference.
@@ -16,9 +16,9 @@ Object that contains instructions for the user for later reference.
 
 # user_actions Properties
 
-| Property | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
-| :------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `\w`     | `object` | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w") |
+| Property | Type     | Required | Nullable       | Defined by                                                                                                                                        |
+| :------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `\w`     | `object` | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w") |
 
 ## Pattern: `\w`
 
@@ -32,7 +32,7 @@ Instruction that can be referenced and presented to the user. Eg key combination
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w")
 
 ### \w Type
 

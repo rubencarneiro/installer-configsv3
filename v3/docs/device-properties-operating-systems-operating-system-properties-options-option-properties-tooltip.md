@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/tooltip
 ```
 
 A very short help text describing the setting.

@@ -1,7 +1,7 @@
 # User action Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w
 ```
 
 Instruction that can be referenced and presented to the user. Eg key combinations to reboot to recovery or bootloader.
@@ -16,13 +16,13 @@ Instruction that can be referenced and presented to the user. Eg key combination
 
 # \w Properties
 
-| Property                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                |
-| :-------------------------- | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [title](#title)             | `string`  | Required | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-title.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title")             |
-| [description](#description) | `string`  | Required | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-description.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description") |
-| [image](#image)             | `string`  | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-image.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image")             |
-| [button](#button)           | `boolean` | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-button.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button")           |
-| [link](#link)               | `string`  | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-link.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link")               |
+| Property                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                      |
+| :-------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [title](#title)             | `string`  | Required | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-title.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title")             |
+| [description](#description) | `string`  | Required | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-description.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description") |
+| [image](#image)             | `string`  | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-image.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image")             |
+| [button](#button)           | `boolean` | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-button.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button")           |
+| [link](#link)               | `string`  | Optional | cannot be null | [Device](device-properties-user-actions-patternproperties-user-action-properties-link.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link")               |
 
 ## title
 
@@ -36,7 +36,7 @@ Identifier of the step. Eg. 'Enable USB-debugging'
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-title.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-title.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title")
 
 ### title Type
 
@@ -54,7 +54,7 @@ Short description of the step. For simple tasks, the full instructions can be pu
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-description.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-description.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/description")
 
 ### description Type
 
@@ -72,7 +72,7 @@ String referring to a picture in the installer.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-image.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-image.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image")
 
 ### image Type
 
@@ -99,7 +99,7 @@ Specify whether there should be a done-button displayed.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-button.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-button.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/button")
 
 ### button Type
 
@@ -117,7 +117,7 @@ A link to a more extensive tutorial.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-link.md "v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link")
+*   defined in: [Device](device-properties-user-actions-patternproperties-user-action-properties-link.md "user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/link")
 
 ### link Type
 

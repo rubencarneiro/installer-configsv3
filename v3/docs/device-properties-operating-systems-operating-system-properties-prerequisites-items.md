@@ -1,7 +1,7 @@
 # Untitled string in Device Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites/items
+operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites/items
 ```
 
 Reference to user_action that's needed before the installation of this OS. Steps required for every OS should be put in the generic unlock block instead.

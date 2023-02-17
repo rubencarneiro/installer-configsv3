@@ -1,7 +1,7 @@
 # Image Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/image
 ```
 
 String referring to a picture in the installer.

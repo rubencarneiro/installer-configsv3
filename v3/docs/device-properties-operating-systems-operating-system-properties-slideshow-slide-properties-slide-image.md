@@ -1,7 +1,7 @@
 # Slide image Schema
 
 ```txt
-v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image
+operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items/properties/image
 ```
 
 Image displayed on the slide.

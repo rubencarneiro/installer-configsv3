@@ -8,114 +8,132 @@
 
 ### Objects
 
-*   [Action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action.md "Atomic action") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items`
+*   [Action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action.md "Actions represent atomic tasks to be executed by different plugins of the UBports Installer") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items`
 
-*   [Checksum](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coremanual_download-action-properties-coremanual_download-action-properties-file-properties-checksum.md "Verify a file's integrity by checking it with a hashing algorithm") – `v3/schema/checksum.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/26/properties/core:manual_download/properties/file/properties/checksum`
+*   [Checksum](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coremanual_download-action-properties-file-properties-checksum.md "Verify a file's integrity by checking it with a hashing algorithm") – `checksum.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:manual_download/properties/file/properties/checksum`
 
-*   [EULA](./device-properties-operating-systems-operating-system-properties-eula.md "An end-user license agreement") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/eula`
+*   [EULA](./device-properties-operating-systems-operating-system-properties-eula.md "An end-user license agreement") – `operating_systems.schema.yml#/properties/operating_systems/items/properties/eula`
 
-*   [File](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coredownload-action-properties-coredownload-action-properties-files-file.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/23/properties/core:download/properties/files/items`
+*   [File](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coredownload-action-properties-files-file.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:download/properties/files/items`
 
-*   [File](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coremanual_download-action-properties-coremanual_download-action-properties-file.md "File to download") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/26/properties/core:manual_download/properties/file`
+*   [File](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coremanual_download-action-properties-file.md "File to download") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:manual_download/properties/file`
 
 *   [Handlers](./device-properties-handlers.md "Steps to run to handle specific known errors") – `v3/schema/device.schema.yml#/properties/handlers`
 
-*   [Operating system](./device-properties-operating-systems-operating-system.md "An operating system available for installation") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items`
+*   [Image](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootwipe_super-action-properties-image.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:wipe_super/properties/image`
 
-*   [Option](./device-properties-operating-systems-operating-system-properties-options-option.md "Option for the installation") – `v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items`
+*   [Operating system](./device-properties-operating-systems-operating-system.md "An operating system available for installation") – `operating_systems.schema.yml#/properties/operating_systems/items`
 
-*   [Partition](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-heimdallflash-action-properties-heimdallflash-action-properties-partitions-partition.md "Partition to flash") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/0/properties/heimdall:flash/properties/partitions/items`
+*   [Option](./device-properties-operating-systems-operating-system-properties-options-option.md "Option for the installation") – `options.schema.yml#/properties/operating_systems/items/properties/options/items`
 
-*   [Partition](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootflash-action-properties-fastbootflash-action-properties-partitions-partition.md "Partition to flash") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/15/properties/fastboot:flash/properties/partitions/items`
+*   [Partition](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-heimdallflash-action-properties-partitions-partition.md "Partition to flash") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/heimdall:flash/properties/partitions/items`
 
-*   [Remote values](./device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "If the values can be generated from a remote source like the systemimage api, this provides the required information for that") – `v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values`
+*   [Partition to flash](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootflash-action-properties-partitions-partition-to-flash.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:flash/properties/partitions/items`
 
-*   [Slide](./device-properties-operating-systems-operating-system-properties-slideshow-slide.md "Slide about the operating system") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items`
+*   [Regular Expression](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbassert_prop-action-properties-regular-expression.md "RegEx Object") – `regex.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:assert_prop/properties/regex`
 
-*   [Step](./device-properties-handlers-properties-step.md "Installation step") – `v3/schema/step.schema.yml#/properties/handlers/properties/bootloader_locked`
+*   [Remote values](./device-properties-operating-systems-operating-system-properties-options-option-properties-remote-values.md "If the values can be generated from a remote source like the systemimage api, this provides the required information for that") – `options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values`
 
-*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootoem_unlock-action-properties-fastbootoem_unlock-action-oneof-1.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/4/properties/fastboot:oem_unlock/oneOf/1`
+*   [Slide](./device-properties-operating-systems-operating-system-properties-slideshow-slide.md "Slide about the operating system") – `operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow/items`
 
-*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coreunpack-action-properties-coreunpack-action-properties-files-items.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/25/properties/core:unpack/properties/files/items`
+*   [Step](./device-properties-handlers-properties-step.md "Installation step") – `step.schema.yml#/properties/handlers/properties/bootloader_locked`
 
-*   [User action](./device-properties-user-actions-patternproperties-user-action.md "Instruction that can be referenced and presented to the user") – `v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w`
+*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbshell-action-oneof-1.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:shell/oneOf/1`
 
-*   [User actions](./device-properties-user-actions.md "Object that contains instructions for the user for later reference") – `v3/schema/user_actions.schema.yml#/properties/user_actions`
+*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coreunpack-action-properties-files-items.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:unpack/properties/files/items`
 
-*   [adb:format action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbformat-action-properties-adbformat-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/19/properties/adb:format`
+*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootoem_unlock-action-oneof-1.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:oem_unlock/oneOf/1`
 
-*   [adb:push action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbpush-action-properties-adbpush-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/21/properties/adb:push`
+*   [Untitled object in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-systemimageinstall-action-oneof-0.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/systemimage:install/oneOf/0`
 
-*   [adb:reboot action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbreboot-action-properties-adbreboot-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/18/properties/adb:reboot`
+*   [User action](./device-properties-user-actions-patternproperties-user-action.md "Instruction that can be referenced and presented to the user") – `user_actions.schema.yml#/properties/user_actions/patternProperties/\w`
 
-*   [adb:shell action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbshell-action-properties-adbshell-action.md "Run a command on the device via adb shell") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/17/properties/adb:reboot`
+*   [User actions](./device-properties-user-actions.md "Object that contains instructions for the user for later reference") – `user_actions.schema.yml#/properties/user_actions`
 
-*   [adb:sideload action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbsideload-action-properties-adbsideload-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/20/properties/adb:sideload`
+*   [adb:assert_prop action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbassert_prop-action.md "Assert a property value over adb shell getprop or, failing that, reading from the default") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:assert_prop`
 
-*   [core:download action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coredownload-action-properties-coredownload-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/23/properties/core:download`
+*   [adb:format action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbformat-action.md "Format a partition over adb shell") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:format`
 
-*   [core:info action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coreinfo-action-properties-coreinfo-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/1/properties/core:info`
+*   [adb:push action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbpush-action.md "Push files to the device over adb") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:push`
 
-*   [core:manual_download action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coremanual_download-action-properties-coremanual_download-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/26/properties/core:manual_download`
+*   [adb:reboot action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbreboot-action.md "Reboot the device over adb") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:reboot`
 
-*   [core:unpack action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coreunpack-action-properties-coreunpack-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/25/properties/core:unpack`
+*   [adb:sideload action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbsideload-action.md "Sideload a zip file OTA package") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:sideload`
 
-*   [core:user_action action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coreuser_action-action-properties-coreuser_action-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/3/properties/core:user_action`
+*   [core:download action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coredownload-action.md "Download files") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:download`
 
-*   [core:write action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-corewrite-action-properties-corewrite-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/24/properties/core:write`
+*   [core:info action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coreinfo-action.md "Display information in the UI") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:info`
 
-*   [fastboot:boot action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootboot-action-properties-fastbootboot-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/10/properties/fastboot:boot`
+*   [core:manual_download action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coremanual_download-action.md "Instruct the user to manually download a file that can't be downloaded automatically, because it is behind some protective mechanism") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:manual_download`
 
-*   [fastboot:erase action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbooterase-action-properties-fastbooterase-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/13/properties/fastboot:erase`
+*   [core:unpack action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coreunpack-action.md "Unpack/decompress an archive using 7z") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:unpack`
 
-*   [fastboot:flash action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootflash-action-properties-fastbootflash-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/15/properties/fastboot:flash`
+*   [core:user_action action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coreuser_action-action.md "Instruct the user to run a user_action") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:user_action`
 
-*   [fastboot:format action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootformat-action-properties-fastbootformat-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/14/properties/fastboot:format`
+*   [core:write action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-corewrite-action.md "Write text to a file") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:write`
 
-*   [fastboot:set_active action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootset_active-action-properties-fastbootset_active-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/16/properties/fastboot:set_active`
+*   [fastboot:assert_var](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootassert_var.md "Assert a bootloader variable over fastboot getvar") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:assert_var`
 
-*   [fastboot:update action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootupdate-action-properties-fastbootupdate-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/7/properties/fastboot:update`
+*   [fastboot:boot action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootboot-action.md "Boot an image file over fastboot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:boot`
 
-*   [heimdall:flash action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-heimdallflash-action-properties-heimdallflash-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/0/properties/heimdall:flash`
+*   [fastboot:create_logical_partition action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootcreate_logical_partition-action.md "Create a logical partition with the given name and size, in the super partition") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:create_logical_partition`
+
+*   [fastboot:delete_logical_partition action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootdelete_logical_partition-action.md "Delete a logical partition with the given name") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:delete_logical_partition`
+
+*   [fastboot:erase action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbooterase-action.md "Erase a partition over fastboot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:erase`
+
+*   [fastboot:flash action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootflash-action.md "Flash a partition over fastboot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:flash`
+
+*   [fastboot:format action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootformat-action.md "Format a partition over fasboot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:format`
+
+*   [fastboot:resize_logical_partition action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootresize_logical_partition-action.md "Resize a logical partition with the given name and final size, in the super partition") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:resize_logical_partition`
+
+*   [fastboot:set_active action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootset_active-action.md "Set active fastboot slot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:set_active`
+
+*   [fastboot:update action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootupdate-action.md "Apply fastboot update zip") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:update`
+
+*   [fastboot:wipe_super action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootwipe_super-action.md "Wipe super partition using fastboot") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:wipe_super`
+
+*   [heimdall:flash action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-heimdallflash-action.md "Flash partitions using heimdall") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/heimdall:flash`
 
 ### Arrays
 
 *   [Aliases](./device-properties-aliases.md "Alternative codenames this device might be identified as") – `v3/schema/device.schema.yml#/properties/aliases`
 
-*   [Arguments](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbshell-action-properties-adbshell-action-properties-arguments.md "Shell arguments") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/17/properties/adb:reboot/properties/args`
+*   [Arguments](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbshell-action-oneof-1-properties-arguments.md "Shell arguments") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:shell/oneOf/1/properties/args`
 
 *   [Doppelgangers](./device-properties-doppelgangers.md "Codenames of devices this device should not be confused with") – `v3/schema/device.schema.yml#/properties/doppelgangers`
 
-*   [Fallback steps](./device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md) – `v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback`
+*   [Fallback steps](./device-properties-operating-systems-operating-system-properties-steps-step-properties-fallback-steps.md) – `step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/fallback`
 
-*   [Files](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-adbpush-action-properties-adbpush-action-properties-files.md "File names to push") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/21/properties/adb:push/properties/files`
+*   [Files](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbpush-action-properties-files.md "File names to push") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:push/properties/files`
 
-*   [Files](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coredownload-action-properties-coredownload-action-properties-files.md "Array of files to download") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/23/properties/core:download/properties/files`
+*   [Files](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coredownload-action-properties-files.md "Files to download") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:download/properties/files`
 
-*   [Operating systems](./device-properties-operating-systems.md "An array of objects describing operating systems available for installation") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems`
+*   [Flags](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootflash-action-properties-partitions-partition-to-flash-properties-flags.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:flash/properties/partitions/items/properties/flags`
 
-*   [Options](./device-properties-operating-systems-operating-system-properties-options.md "Options for the installation") – `v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options`
+*   [Operating systems](./device-properties-operating-systems.md "An array of objects describing operating systems available for installation") – `operating_systems.schema.yml#/properties/operating_systems`
 
-*   [Partitions](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-heimdallflash-action-properties-heimdallflash-action-properties-partitions.md "Partitions to flash") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/0/properties/heimdall:flash/properties/partitions`
+*   [Options](./device-properties-operating-systems-operating-system-properties-options.md "Options for the installation") – `options.schema.yml#/properties/operating_systems/items/properties/options`
 
-*   [Partitions](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-fastbootflash-action-properties-fastbootflash-action-properties-partitions.md "Partitions to flash") – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/15/properties/fastboot:flash/properties/partitions`
+*   [Partitions](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-fastbootflash-action-properties-partitions.md "Partitions to flash") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/fastboot:flash/properties/partitions`
 
-*   [Prerequisites](./device-properties-operating-systems-operating-system-properties-prerequisites.md "An array of strings referring to user_actions defined above that are needed before the installation") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites`
+*   [Partitions](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-heimdallflash-action-properties-partitions.md "Partitions to flash") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/heimdall:flash/properties/partitions`
 
-*   [Slideshow](./device-properties-operating-systems-operating-system-properties-slideshow.md "An array of slides presenting the operating system's most compelling features") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow`
+*   [Prerequisites](./device-properties-operating-systems-operating-system-properties-prerequisites.md "An array of strings referring to user_actions defined above that are needed before the installation") – `operating_systems.schema.yml#/properties/operating_systems/items/properties/prerequisites`
 
-*   [Steps](./device-properties-operating-systems-operating-system-properties-steps.md "An ordered array of objects describing steps required to install the operating system") – `v3/schema/operating_systems.schema.yml#/properties/operating_systems/items/properties/steps`
+*   [Slideshow](./device-properties-operating-systems-operating-system-properties-slideshow.md "An array of slides presenting the operating system's most compelling features") – `operating_systems.schema.yml#/properties/operating_systems/items/properties/slideshow`
+
+*   [Steps](./device-properties-operating-systems-operating-system-properties-steps.md "An ordered array of objects describing steps required to install the operating system") – `operating_systems.schema.yml#/properties/operating_systems/items/properties/steps`
 
 *   [Unlock actions](./device-properties-unlock-actions.md "An array of strings referring to user_actions defined above that are needed to unlock the device") – `v3/schema/device.schema.yml#/properties/unlock`
 
-*   [Untitled array in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coreunpack-action-properties-coreunpack-action-properties-files.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/25/properties/core:unpack/properties/files`
+*   [Untitled array in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-adbshell-action-oneof-0.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/adb:shell/oneOf/0`
 
-*   [Values](./device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "List of values for the select") – `v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values`
+*   [Untitled array in Device](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coreunpack-action-properties-files.md) – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:unpack/properties/files`
 
-*   [core:group action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-oneof-coregroup-action-properties-coregroup-action.md) – `v3/schema/action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/oneOf/2/properties/core:group`
+*   [Values](./device-properties-operating-systems-operating-system-properties-options-option-properties-values.md "List of values for the select") – `options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/values`
 
-*   [group step](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md) – `v3/schema/step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions`
+*   [core:group action](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step-action-properties-coregroup-action.md "Run steps as a group") – `action.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions/items/properties/core:group`
 
-## Version Note
-
-The schemas linked above follow the JSON Schema Spec version: `http://json-schema.org/draft-07/schema#`
+*   [group step](./device-properties-operating-systems-operating-system-properties-steps-step-properties-group-step.md) – `step.schema.yml#/properties/operating_systems/items/properties/steps/items/properties/actions`

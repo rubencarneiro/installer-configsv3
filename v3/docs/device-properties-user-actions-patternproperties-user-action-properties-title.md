@@ -1,7 +1,7 @@
 # Title Schema
 
 ```txt
-v3/schema/user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title
+user_actions.schema.yml#/properties/user_actions/patternProperties/\w/properties/title
 ```
 
 Identifier of the step. Eg. 'Enable USB-debugging'

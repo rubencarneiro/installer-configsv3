@@ -16,17 +16,17 @@ Device configuration for the UBports Installer
 
 # Device Properties
 
-| Property                                | Type     | Required | Nullable       | Defined by                                                                                                              |
-| :-------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)                           | `string` | Required | cannot be null | [Device](device-properties-name.md "v3/schema/device.schema.yml#/properties/name")                                      |
-| [codename](#codename)                   | `string` | Required | cannot be null | [Device](device-properties-codename.md "v3/schema/device.schema.yml#/properties/codename")                              |
-| [formfactor](#formfactor)               | `string` | Required | cannot be null | [Device](device-properties-formfactor.md "v3/schema/formfactor.schema.yml#/properties/formfactor")                      |
-| [aliases](#aliases)                     | `array`  | Optional | cannot be null | [Device](device-properties-aliases.md "v3/schema/device.schema.yml#/properties/aliases")                                |
-| [doppelgangers](#doppelgangers)         | `array`  | Optional | cannot be null | [Device](device-properties-doppelgangers.md "v3/schema/device.schema.yml#/properties/doppelgangers")                    |
-| [user_actions](#user_actions)           | `object` | Optional | cannot be null | [Device](device-properties-user-actions.md "v3/schema/user_actions.schema.yml#/properties/user_actions")                |
-| [handlers](#handlers)                   | `object` | Optional | cannot be null | [Device](device-properties-handlers.md "v3/schema/device.schema.yml#/properties/handlers")                              |
-| [unlock](#unlock)                       | `array`  | Optional | cannot be null | [Device](device-properties-unlock-actions.md "v3/schema/device.schema.yml#/properties/unlock")                          |
-| [operating_systems](#operating_systems) | `array`  | Required | cannot be null | [Device](device-properties-operating-systems.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems") |
+| Property                                | Type     | Required | Nullable       | Defined by                                                                                                    |
+| :-------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------ |
+| [name](#name)                           | `string` | Required | cannot be null | [Device](device-properties-name.md "v3/schema/device.schema.yml#/properties/name")                            |
+| [codename](#codename)                   | `string` | Required | cannot be null | [Device](device-properties-codename.md "v3/schema/device.schema.yml#/properties/codename")                    |
+| [formfactor](#formfactor)               | `string` | Required | cannot be null | [Device](device-properties-formfactor.md "formfactor.schema.yml#/properties/formfactor")                      |
+| [aliases](#aliases)                     | `array`  | Optional | cannot be null | [Device](device-properties-aliases.md "v3/schema/device.schema.yml#/properties/aliases")                      |
+| [doppelgangers](#doppelgangers)         | `array`  | Optional | cannot be null | [Device](device-properties-doppelgangers.md "v3/schema/device.schema.yml#/properties/doppelgangers")          |
+| [user_actions](#user_actions)           | `object` | Optional | cannot be null | [Device](device-properties-user-actions.md "user_actions.schema.yml#/properties/user_actions")                |
+| [handlers](#handlers)                   | `object` | Optional | cannot be null | [Device](device-properties-handlers.md "v3/schema/device.schema.yml#/properties/handlers")                    |
+| [unlock](#unlock)                       | `array`  | Optional | cannot be null | [Device](device-properties-unlock-actions.md "v3/schema/device.schema.yml#/properties/unlock")                |
+| [operating_systems](#operating_systems) | `array`  | Required | cannot be null | [Device](device-properties-operating-systems.md "operating_systems.schema.yml#/properties/operating_systems") |
 
 ## name
 
@@ -76,7 +76,7 @@ What kind of device is it?
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-formfactor.md "v3/schema/formfactor.schema.yml#/properties/formfactor")
+*   defined in: [Device](device-properties-formfactor.md "formfactor.schema.yml#/properties/formfactor")
 
 ### formfactor Type
 
@@ -150,7 +150,7 @@ Object that contains instructions for the user for later reference.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-user-actions.md "v3/schema/user_actions.schema.yml#/properties/user_actions")
+*   defined in: [Device](device-properties-user-actions.md "user_actions.schema.yml#/properties/user_actions")
 
 ### user_actions Type
 
@@ -208,7 +208,7 @@ An array of objects describing operating systems available for installation.
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-operating-systems.md "v3/schema/operating_systems.schema.yml#/properties/operating_systems")
+*   defined in: [Device](device-properties-operating-systems.md "operating_systems.schema.yml#/properties/operating_systems")
 
 ### operating_systems Type
 

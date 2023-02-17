@@ -1,7 +1,7 @@
 # Untitled null in Device Schema
 
 ```txt
-v3/schema/options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels
+options.schema.yml#/properties/operating_systems/items/properties/options/items/properties/remote_values/properties/asteroid_os:channels
 ```
 
 
