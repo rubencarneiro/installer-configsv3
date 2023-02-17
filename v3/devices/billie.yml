@@ -1,4 +1,4 @@
-name: "SageTe Edge NEW"
+name: "OnePlus N10 5G"
 codename: "billie"
 formfactor: "phone"
 aliases: []
@@ -6,10 +6,18 @@ doppelgangers: []
 user_actions:
   confirm_model:
     title: "Confirm your model"
-    description: "Please check that your device is a OnePlus Nord N10 5G (billie)."
+    description: "Please check that your device is a OnePlus N10 5G (billie)."
+  confirm_os:
+    title: "Confirm OS version"
+    description: "Your device must be running the Fairphone OS version of Android 10 before installing Ubuntu Touch. With a previously installed custom ROM, it won't work!"
+    link: "https://support.fairphone.com/hc/en-us/articles/4405858261777"
+  unlock_phone:
+    title: "Unlock the bootloader"
+    description: "Before installing Ubuntu Touch you must unlock the bootloader of your phone manually. Follow the steps in the linked page if you haven't already."
+    link: "https://support.fairphone.com/hc/en-us/articles/4405858258961-FP4-Manage-the-bootloader"
   bootloader:
     title: "Reboot to Bootloader"
-    description: "With the device powered off, press and hold the volume down and power buttons until the screen turns on. It should say 'Fastboot Mode' underneath the warning sign."
+    description: "With the device powered off, press and hold the VOLUME DOWN button and plug the device into your PC via USB. After some seconds you'll see the fastboot mode."
     image: "phone_power_down"
     button: true
   bootloader_from_fastbootd:
@@ -19,30 +27,18 @@ user_actions:
     button: true
   recovery:
     title: "Reboot to Recovery"
-    description: "With the device still at the 'Fastboot Mode' screen (if not, power off the device and press and hold volume down and power buttons until the screen turns on), select the 'Recovery Mode' option by using the volume buttons and press the power button to enter."
-    image: "phone_power_down"
+    description: 'With the device still at the "FastBoot Mode", use the Volume buttons to switch to "Recovery Mode" and push the power button to confirm your selection.'
+    image: "phone_power_up"
     button: true
   fastbootd:
     title: "Reboot to fastbootd mode"
     description: 'With the device still at the "FastBoot Mode", use the Volume buttons to switch to "Recovery Mode" and push the power button to confirm your selection. Then select "Fastboot mode" from the list.'
     image: "phone_power_up"
     button: true
-  downgrade_android:
-    title: "Downgrade Android"
-    description: "If the device is running an Android version above 10.0, you have to downgrade to the last 10.0 release. Please make sure to flash version OxygenOS_10.5.10 of the factory image before proceeding."
-    link: "https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N10_5G/EU_BE89BA/Q/OnePlus_Nord_N10_5G_EU_OxygenOS_10.5.10.zip"
-  support:
-    title: "Support"
-    description: "For details about Sagetea Software support for the XFone, please head over to the Sagetea Support here."
-    link: "https://xfonemobile.com/contact-modern/"
 unlock:
   - "confirm_model"
-  - "downgrade_android"
-  - "support"
-handlers:
-  bootloader_locked:
-    actions:
-      - fastboot:flashing_unlock:
+  - "confirm_os"
+  - "unlock_phone"
 operating_systems:
   - name: "Ubuntu Touch"
     options:
@@ -69,13 +65,23 @@ operating_systems:
         value: true
     prerequisites: []
     steps:
-    ### Ensure we always start in bootloader mode
+      ### Ensure we always start in bootloader mode
       - actions:
           - adb:reboot:
               to_state: "bootloader"
         fallback:
           - core:user_action:
               action: "bootloader"
+      ### Ensure the bootloader has been unlocked already
+      - actions:
+          - fastboot:wait:
+      - actions:
+          - fastboot:assert_var:
+              variable: "unlocked"
+              value: "yes"
+        fallback:
+          - core:user_action:
+              action: "unlock_phone"
       ### As this is an A/B device, force all future operations in "a" slot.
       - actions:
           - fastboot:set_active:
@@ -125,6 +131,7 @@ operating_systems:
         condition:
           var: "bootstrap"
           value: true
+      ### Set up logical partitions (if requested)
       - actions:
           - fastboot:reboot_fastboot:
         fallback:
