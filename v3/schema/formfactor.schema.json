@@ -1,1 +1,0 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"formfactor.schema.json","title":"Formfactor","type":"string","description":"What kind of device is it?","enum":["computer","laptop","phone","tablet","watch"]}
