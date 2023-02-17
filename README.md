@@ -2,18 +2,36 @@
 
 This repository contains the config files for [UBports Installer](https://github.com/ubports/ubports-installer) devices.
 
-Devices are configured using [YAML](https://yaml.org/) files following the [schema specifcation](./v2/schema/device.schema.yml) in the [./v2/devices](./v2/devices) directory.
+Devices are configured using [YAML](https://yaml.org/) files following the [schema specifcation](./v2/schema/_.schema.yml) in the [./v2/devices](./v2/devices) directory.
 
 If you want to propose changes to the structure or propose a new action, open an [issue](https://github.com/ubports/installer-configs/issues/new). Device-specific installation issues should be filed directly against the [UBports Installer's repository](https://github.com/ubports/ubports-installer/issues/new).
 
 ## Contributing
 
-If you want to add a or improve a device, run `npm run validate` to make sure your file follows the specification and `npm run lint` to make it pretty. You can use `npm run checkdownloads` to make sure all files download successfully.
+If you want to add a or improve a device, run `npm run build && npm run validate` to make sure your file follows the specification and `npm run lint` to make it pretty. You can use `npm run checksemver` to validate semver strings and `npm run checkdownloads` to make sure all files download successfully. If you modify any specifications, use `npm run test` to run specification validation tests.
 
 You can use your local config file with the [UBports Installer](https://github.com/ubports/ubports-installer) by supplying the `--file` or `-f` flag:
 
 ```
 ubports-installer -f ./path/to/config.yml
+```
+
+## Library usage
+
+Install using `npm i ubports-installer-configs`.
+
+```javascript
+import validate from "ubports-installer-configs";
+
+validate(object); // will return true or false
+```
+
+TypeScript Types for the config file schema are exported as `UBportsInstallerConfig`.
+
+```typescript
+import { validate, UBportsInstallerConfig } from "ubports-installer-configs";
+
+validate(object as UBportsInstallerConfig);
 ```
 
 ## Specification
@@ -25,8 +43,8 @@ ubports-installer -f ./path/to/config.yml
 ### v2
 
 - **published: November 2020**
-- **lead author: Jan Sprinz**
-- [JSON Schema](https://github.com/ubports/installer-configs/blob/master/v2/schema/device.schema.yml)
+- **lead author: Johannah Sprinz**
+- [JSON Schema](https://github.com/ubports/installer-configs/blob/master/v2/schema_.schema.yml)
 
 Starting with version 0.8.1-beta, the UBports Installer uses version 2 of the config file structure. The changes in specification draw from the experience made with the initial version of the specification and take some inspiration from [Ansible Playbooks](https://www.ansible.com/) and the [OPEN-CUTS combination filtering language](https://www.open-cuts.org/).
 
@@ -45,26 +63,10 @@ Some of the high-level changes include:
 - Many steps have been renamed to allow namespacing for the UBports Installer's new plugin system.
 - Steps may now specify a range of actions that belong together [#17](https://github.com/ubports/installer-configs/issues/17)
 
-#### Migrate
-
-You can use the migration script to quickly migrate a `v1` config to `v2`:
-
-```
-$ ./v2/migrate.js -h
-Usage: ./v2/migrate.js -i ./path/to.json
-
-migrate a v1 JSON config to v2 YAML
-
-Options:
-  -V, --version               output the version number
-  -i, --input <path to json>  v1 file (default: undefined)
-  -h, --help                  output usage information
-```
-
 ### v1
 
 - **published: October 2019**
-- **lead author: Jan Sprinz**
+- **lead author: Johannah Sprinz**
 - [JSON Schema](https://github.com/ubports/installer-configs/blob/master/v1/_device.schema.json)
 
 The initial specification of the UBports Installer config files was drafted for version [0.4.1-beta](https://github.com/ubports/ubports-installer/releases/tag/0.4.1-beta) and [presented at Ubucon Europe 2019](https://youtu.be/2ZCDOe1CjZ8). It relied on plain JSON files that the UBports Installer either read from disk or downloaded directly from the git repository. The specification was used until [UBports Installer version 0.8.0-beta](https://github.com/ubports/ubports-installer/releases/tag/0.8.0-beta).
@@ -75,7 +77,7 @@ Every device is configured by a `<codename>.json` file that contains information
 
 ## License
 
-Original development by [Jan Sprinz](https://spri.nz). Copyright (C) 2019-2020 [UBports Foundation](https://ubports.com).
+Original development by [Johannah Sprinz](https://spri.nz). Copyright (C) 2019-2022 [UBports Foundation](https://ubports.com).
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
