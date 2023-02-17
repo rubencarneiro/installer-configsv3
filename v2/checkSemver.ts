@@ -34,12 +34,12 @@ Promise.all([
     )
     .then(({ data }) => data.tag_name),
   fs
-    .readdir("v2/devices")
+    .readdir("v3/devices")
     .then(files =>
       Promise.all(
         files.map(f =>
           fs
-            .readFile(path.join("v2", "devices", f))
+            .readFile(path.join("v3", "devices", f))
             .then(cfg => YAML.parse(cfg.toString()))
             .then(({ codename, operating_systems }) =>
               operating_systems

@@ -46,12 +46,12 @@ const check_step = ({ actions, fallback }) =>
   ].flat();
 
 fs.mkdir(path.join("downloads"), { recursive: true })
-  .then(() => fs.readdir("v2/devices"))
+  .then(() => fs.readdir("v3/devices"))
   .then(files =>
     Promise.all(
       files.map(f =>
         fs
-          .readFile(path.join("v2", "devices", f))
+          .readFile(path.join("v3", "devices", f))
           .then(cfg => YAML.parse(cfg.toString()))
           .then(({ operating_systems }) =>
             operating_systems.map(({ steps }) => steps.map(check_step).flat())
