@@ -33,5 +33,5 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["v2"]
+  "include": ["v3"]
 }
