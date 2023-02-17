@@ -1,5 +1,5 @@
-$schema: "http://json-schema.org/draft-07/schema#"
-$id: "v2/schema/step.schema.yml"
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: "step.schema.yml"
 title: "Step"
 type: "object"
 description: "Installation step."

@@ -1,5 +1,5 @@
-$schema: "http://json-schema.org/draft-07/schema#"
-$id: "v2/schema/options.schema.yml"
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: "options.schema.yml"
 title: Options
 type: "array"
 description: "Options for the installation."
@@ -37,6 +37,12 @@ items:
         systemimage:channels:
           type: "null"
         asteroid_os:channels:
+          type: "null"
+        lineage_os:channels:
+          type: "null"
+        postmarketos:releases:
+          type: "null"
+        postmarketos:interfaces:
           type: "null"
     value:
       description: "Default value of the option"
