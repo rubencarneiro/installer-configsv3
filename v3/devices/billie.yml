@@ -162,6 +162,14 @@ operating_systems:
           var: "partition"
           value: true
       - actions:
+          - fastboot:flash:
+              partitions:
+                - partition: "system_a"
+                  file: "system.img"
+        condition:
+          var: "partition"
+          value: true
+      - actions:
           - fastboot:reboot_bootloader:
         fallback:
           - core:user_action:
