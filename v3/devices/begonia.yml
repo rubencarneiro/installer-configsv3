@@ -3,6 +3,7 @@ codename: "begonia"
 formfactor: "phone"
 aliases: []
 doppelgangers: []
+user_actions:
   bootloader:
     title: "Reboot to Bootloader"
     description: "With the device powered off, hold Volume Down + Power."
