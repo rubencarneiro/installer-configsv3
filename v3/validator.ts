@@ -99,6 +99,7 @@ const keywords: FuncKeywordDefinition[] = [
       message: "invalid semver range"
     }
   },
+];
 
 const ajv = new Ajv({
   keywords,
