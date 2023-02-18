@@ -100,33 +100,6 @@ const keywords: FuncKeywordDefinition[] = [
     }
   },
 
-  /** ensure the compatible_installer specified for the operating_system satisfies every action */
-  {
-    keyword: "ubports_installer-compatibility",
-    compile:
-      required_by_action =>
-      // @ts-ignore FIXME
-      (_, { rootData, instancePath }) =>
-        !instancePath.startsWith("/operating_systems/") ||
-        semver.subset(
-          // semver range specified in the installer configs for this os
-          rootData.operating_systems[
-            instancePath.split("/operating_systems/")[1].split("/")[0]
-          ].compatible_installer,
-          // minimum required version specifyed in the schema for this action
-          required_by_action,
-          { loose: true, includePrerelease: true }
-        ),
-    error: {
-      message: ({ schema }) => `requires compatible_installer ${schema}`
-    },
-    metaSchema: {
-      type: "string",
-      ubports_semver: null
-    }
-  }
-];
-
 const ajv = new Ajv({
   keywords,
   schemas,
