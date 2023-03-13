@@ -1,4 +1,4 @@
-name: "OnePlus N10 5G"
+name: "XFONE OPON105G"
 codename: "billie"
 formfactor: "phone"
 aliases: []
@@ -111,6 +111,23 @@ operating_systems:
           var: "bootstrap"
           value: true
       - actions:
+          - core:download:
+              group: "Ubuntu Touch"
+              files:
+                - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/system.zip"
+                  name: "system.zip"
+                  checksum:
+                    sum: "9607c8af27d9d344b1ba12e471bf0b91e2cc746554ef202b2b5d0b387306c9c0"
+                    algorithm: "sha256"
+                - url: "https://github.com/rubencarneiro/sagetea-edge/releases/download/1.0/boot.img"
+                  name: "boot.img"
+                  checksum:
+                    sum: "9b3405930942328684c8a114358f70e44ba945eb0062f7bb2e46a26e5bc2bcb7"
+                    algorithm: "sha256"         
+        condition:
+          var: "bootstrap"
+          value: true
+      - actions:
           - fastboot:flash:
               partitions:
                 - partition: "boot"
@@ -158,8 +175,26 @@ operating_systems:
           - fastboot:delete_logical_partition:
               partition: "odm_b"
         condition:
-          var: "partition"
+          var: "bootstrap"
           value: true
+      - actions:
+          - core:unpack:
+              group: "Ubuntu Touch"
+              files:
+                - archive: "system.zip"
+                  dir: "unpacked"
+        condition:
+          var: "bootstrap"
+          value: true
+      - actions:
+          - fastboot:flash:
+              partitions:
+                - partition: "boot"
+                  file: "boot.img"
+                  group: "Ubuntu Touch"
+                - partition: "system_a"
+                  file: "unpacked/system.img"
+                  group: "Ubuntu Touch"
       - actions:
           - fastboot:reboot_bootloader:
         fallback:
