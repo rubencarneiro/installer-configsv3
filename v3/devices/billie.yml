@@ -1,7 +1,7 @@
 name: "SageTea Edge OPON105G"
 codename: "billie"
 formfactor: "phone"
-aliases: []
+aliases: [billie]
 doppelgangers: []
 user_actions:
   confirm_model:
@@ -57,7 +57,7 @@ operating_systems:
         name: "Partitioning"
         tooltip: "Changes partition sizes as required. Only necessary for first time installations."
         type: "checkbox"
-        value: false
+        value: true
       - var: "bootstrap"
         name: "Bootstrap"
         tooltip: "Flash system partitions using fastboot"
@@ -82,10 +82,6 @@ operating_systems:
         fallback:
           - core:user_action:
               action: "unlock_phone"
-      ### As this is an A/B device, force all future operations in "a" slot.
-      - actions:
-          - fastboot:set_active:
-              slot: "a"
       ### Flash important partitions (if requested)
       - actions:
           - core:download:
@@ -125,9 +121,6 @@ operating_systems:
                 - partition: "vbmeta"
                   file: "vbmeta.img"
                   group: "firmware"
-                  flags:
-                    - "--disable-verity"
-                    - "--disable-verification"
         condition:
           var: "bootstrap"
           value: true
@@ -150,15 +143,8 @@ operating_systems:
               partition: "product_a"
           - fastboot:delete_logical_partition:
               partition: "product_b"
-          # Remove _b variants of used partitions
-          - fastboot:delete_logical_partition:
-              partition: "system_b"
-          - fastboot:delete_logical_partition:
-              partition: "vendor_b"
-          - fastboot:delete_logical_partition:
-              partition: "odm_b"
         condition:
-          var: "bootstrap"
+          var: "partition"
           value: true
       - actions:
           - fastboot:reboot_bootloader:
