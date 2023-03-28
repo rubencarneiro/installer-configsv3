@@ -1,7 +1,7 @@
 name: "SageTea Edge OPON105G"
 codename: "billie"
 formfactor: "phone"
-aliases: [billie]
+aliases: [lito]
 doppelgangers: []
 user_actions:
   confirm_model:
