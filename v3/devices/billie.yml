@@ -82,6 +82,10 @@ operating_systems:
         fallback:
           - core:user_action:
               action: "unlock_phone"
+          ### As this is an A/B device, force all future operations in "a" slot.
+      - actions:
+          - fastboot:set_active:
+              slot: "a"
       ### Flash important partitions (if requested)
       - actions:
           - core:download:
