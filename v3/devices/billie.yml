@@ -147,6 +147,12 @@ operating_systems:
               partition: "product_a"
           - fastboot:delete_logical_partition:
               partition: "product_b"
+          # Remove _b variants of used partitions
+          - fastboot:delete_logical_partition:
+              partition: "system_b"
+          - fastboot:delete_logical_partition:
+              partition: "vendor_b"
+          - fastboot:delete_logical_partition:
         condition:
           var: "partition"
           value: true
