@@ -1,7 +1,7 @@
 name: "SageTea Edge OPON105G"
 codename: "billie"
 formfactor: "phone"
-aliases: [lito]
+aliases: [lito, OnePlusN10]
 doppelgangers: []
 user_actions:
   confirm_model:
@@ -151,9 +151,21 @@ operating_systems:
           - fastboot:delete_logical_partition:
               partition: "system_b"
           - fastboot:delete_logical_partition:
+              partition: "boot_b"
+          - fastboot:delete_logical_partition:
+              partition: "recovery_b"
+          - fastboot:delete_logical_partition:
+              partition: "vbmeta_b"
+          - fastboot:delete_logical_partition:
+              partition: "xbl_b"
+          - fastboot:delete_logical_partition:
               partition: "vendor_b"
           - fastboot:delete_logical_partition:
               partition: "odm_b"
+          # Increase space for system_a for UT installation
+          - fastboot:resize_logical_partition:
+              partition: "system_a"
+              size: 3221225472
         condition:
           var: "partition"
           value: true
