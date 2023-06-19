@@ -10,7 +10,7 @@ user_actions:
   confirm_os:
     title: "Confirm OS version"
     description: "Your device must be running the Android 10 stock firmware OxygenOS_10.5.10 before installing Ubuntu Touch."
-    link: "https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N10_5G/EU_BE89BA/Q/OnePlus_Nord_N10_5G_EU_OxygenOS_10.5.10.zip"
+    link: "https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N10_5G/EU_BE89BA/Q/OnePlus_Nord_N10_5G_EU_OxygenOS_10.5.7.zip"
   unlock_phone:
     title: "Unlock the bootloader"
     description: "Before installing Ubuntu Touch you must unlock the bootloader of your phone manually. Follow the steps in the linked page if you haven't already."
@@ -150,14 +150,6 @@ operating_systems:
           # Remove _b variants of used partitions
           - fastboot:delete_logical_partition:
               partition: "system_b"
-          - fastboot:delete_logical_partition:
-              partition: "boot_b"
-          - fastboot:delete_logical_partition:
-              partition: "recovery_b"
-          - fastboot:delete_logical_partition:
-              partition: "vbmeta_b"
-          - fastboot:delete_logical_partition:
-              partition: "xbl_b"
           - fastboot:delete_logical_partition:
               partition: "vendor_b"
           - fastboot:delete_logical_partition:
