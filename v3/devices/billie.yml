@@ -9,7 +9,7 @@ user_actions:
     description: "Please check that your device is a OnePlus N10 5G (billie)."
   confirm_os:
     title: "Confirm OS version"
-    description: "Your device must be running the Android 10 stock firmware OxygenOS_10.5.10 before installing Ubuntu Touch."
+    description: "Your device must be running the Android 10 stock firmware OxygenOS_10.5.7 before installing Ubuntu Touch."
     link: "https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N10_5G/EU_BE89BA/Q/OnePlus_Nord_N10_5G_EU_OxygenOS_10.5.7.zip"
   unlock_phone:
     title: "Unlock the bootloader"
