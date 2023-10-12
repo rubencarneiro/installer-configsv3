@@ -97,7 +97,7 @@ operating_systems:
                     algorithm: "sha256"
                 - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/recovery.img"
                   checksum:
-                    sum: "ed535d8ca1e2284d8e5efc6f765cf6a418134a3222a0b5764aec409305a2e24c"
+                    sum: "75677fe0306f176f1468c8b60e07de9078b914481d0a3195e4a2c995a0de1328"
                     algorithm: "sha256"
                 - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/dtbo.img"
                   checksum:
