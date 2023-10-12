@@ -97,7 +97,7 @@ operating_systems:
                     algorithm: "sha256"
                 - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/recovery.img"
                   checksum:
-                    sum: "75677fe0306f176f1468c8b60e07de9078b914481d0a3195e4a2c995a0de1328"
+                    sum: "945dbf3f70a4986e564012269c2d3b467cc65737286635bcc8bac88ed3a2ae4c"
                     algorithm: "sha256"
                 - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/dtbo.img"
                   checksum:
@@ -143,6 +143,8 @@ operating_systems:
               partition: "system_ext_a"
           - fastboot:delete_logical_partition:
               partition: "system_ext_b"
+          - fastboot:delete_logical_partition:
+              partition: "product_a"
           - fastboot:delete_logical_partition:
               partition: "product_b"
           # Remove _b variants of used partitions
