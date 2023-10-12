@@ -91,19 +91,19 @@ operating_systems:
           - core:download:
               group: "firmware"
               files:
-                - url: "https://github.com/rubencarneiro/billie/releases/download/1.0/boot.img"
+                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/boot.img"
                   checksum:
                     sum: "6a92ba9e6c253de3ba30cf2a7f714f6b94684fc2e338b86bffe74df2e1d2a36d"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie/releases/download/1.0/recovery.img"
+                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/recovery.img"
                   checksum:
                     sum: "ed535d8ca1e2284d8e5efc6f765cf6a418134a3222a0b5764aec409305a2e24c"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie/releases/download/1.0/dtbo.img"
+                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/dtbo.img"
                   checksum:
                     sum: "47eac9731ffbdea4373acb60eeb30837642d3e69773a65f71125b304390225dc"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie/releases/download/1.0/vbmeta.img"
+                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/vbmeta.img"
                   checksum:
                     sum: "06ad2b775ec21134aa935eb6e0a48514198822ee7bfb1773f27cc006a0c6e427"
                     algorithm: "sha256"       
