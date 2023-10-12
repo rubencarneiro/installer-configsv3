@@ -144,8 +144,6 @@ operating_systems:
           - fastboot:delete_logical_partition:
               partition: "system_ext_b"
           - fastboot:delete_logical_partition:
-              partition: "product_a"
-          - fastboot:delete_logical_partition:
               partition: "product_b"
           # Remove _b variants of used partitions
           - fastboot:delete_logical_partition:
